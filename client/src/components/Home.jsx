@@ -30,7 +30,7 @@ const Home = () => {
   // Function to fetch user profile
   const fetchProfile = async () => {
     try {
-      const response = await axios.get('https://ecobase-1.onrender.com/profile', {
+      const response = await axios.get('https://ecobase-v1-1.onrender.com/profile', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const Home = () => {
   const joinInitiative = async (initiativeId) => {
     try {
       const response = await axios.post(
-        `https://ecobase-1.onrender.com/initiative/${initiativeId}/join`,
+        `https://ecobase-v1-1.onrender.com/initiative/${initiativeId}/join`,
         {},
         {
           headers: {
@@ -70,7 +70,7 @@ const Home = () => {
   // Function to delete an initiative
   const deleteInitiative = async (initiativeId) => {
     try {
-      await axios.delete(`http://localhost:3000/initiative/${initiativeId}`, {
+      await axios.delete(`https://ecobase-v1-1.onrender.com/initiative/${initiativeId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -94,7 +94,7 @@ const Home = () => {
   const saveEditedInitiative = async () => {
     try {
       await axios.put(
-        `http://localhost:3000/initiative/${editedInitiative._id}`,
+        `https://ecobase-v1-1.onrender.com/initiative/${editedInitiative._id}`,
         {
           name: editedName,
           description: editedDescription,

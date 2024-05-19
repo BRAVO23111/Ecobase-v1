@@ -13,7 +13,7 @@ const EcoActionForm = () => {
     e.preventDefault();
     try {
       await axios.post(
-        'https://ecobase-1.onrender.com/ecoAction',
+        'https://ecobase-v1-1.onrender.com/ecoAction',
         {
           actionType,
           description,

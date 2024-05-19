@@ -12,7 +12,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("https://ecobase-1.onrender.com/profile", {
+        const response = await axios.get("https://ecobase-v1-1.onrender.com/profile", {
           headers: {
             Authorization: `Bearer ${window.localStorage.getItem("token")}`,
           },

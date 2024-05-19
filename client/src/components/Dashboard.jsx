@@ -12,7 +12,7 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         const response = await axios.get(
-          "https://ecobase-1.onrender.com/ecoAction/dashboard",
+          "https://ecobase-v1-1.onrender.com/ecoAction/dashboard",
           {
             headers: {
               Authorization: `Bearer ${window.localStorage.getItem("token")}`,

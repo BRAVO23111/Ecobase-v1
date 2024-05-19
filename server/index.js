@@ -9,7 +9,7 @@ import { ecoActionRouter } from "./controller/EcoActionController.js";
 const app = express();
 app.use(
   cors({
-    origin: ["https://ecobase-v1.vercel.app"],
+    origin: ["https://ecobase-v1.vercel.app/"],
     method: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );

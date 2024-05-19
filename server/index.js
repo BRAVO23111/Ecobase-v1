@@ -6,14 +6,18 @@ import { userRouter } from "./controller/AuthController.js";
 import { ProfileRouter } from "./controller/ProfileController.js";
 import { initiativeRouter } from "./controller/Intiativerouter.js";
 import { ecoActionRouter } from "./controller/EcoActionController.js";
+dotenv.config();
 const app = express();
+
 app.use(
   cors({
-    origin: ["https://ecobase-v1.vercel.app/"],
+    origin: ["https://ecobase-v1.vercel.app"],
     method: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  })
+    credentials : true
+  })  
 );
-dotenv.config();
+app.use(express.json())
+
 const db = mongoose.connect(process.env.MONGO_URI);
 
 try {
